@@ -1,0 +1,97 @@
+/* RTL Support */
+[dir="rtl"] {
+  /* Text alignment */
+  .text-left {
+    text-align: right !important;
+  }
+  .text-right {
+    text-align: left !important;
+  }
+
+  /* Margins and Paddings */
+  .ml-1, .ml-2, .ml-3, .ml-4, .ml-5, .ml-6, .ml-8, .ml-10, .ml-12 {
+    margin-left: 0 !important;
+    margin-right: 0.25rem !important;
+  }
+  .mr-1, .mr-2, .mr-3, .mr-4, .mr-5, .mr-6, .mr-8, .mr-10, .mr-12 {
+    margin-right: 0 !important;
+    margin-left: 0.25rem !important;
+  }
+  .pl-1, .pl-2, .pl-3, .pl-4, .pl-5, .pl-6, .pl-8, .pl-10, .pl-12 {
+    padding-left: 0 !important;
+    padding-right: 0.25rem !important;
+  }
+  .pr-1, .pr-2, .pr-3, .pr-4, .pr-5, .pr-6, .pr-8, .pr-10, .pr-12 {
+    padding-right: 0 !important;
+    padding-left: 0.25rem !important;
+  }
+
+  /* Flexbox */
+  .flex-row {
+    flex-direction: row-reverse !important;
+  }
+
+  /* Grid */
+  .grid {
+    direction: rtl !important;
+  }
+
+  /* Form elements */
+  input[type="text"],
+  input[type="number"],
+  input[type="email"],
+  input[type="tel"],
+  textarea,
+  select {
+    text-align: right !important;
+    direction: rtl !important;
+  }
+
+  /* Buttons and Icons */
+  .rtl-flip {
+    transform: scaleX(-1) !important;
+  }
+
+  .rtl-rotate-180 {
+    transform: rotate(180deg) !important;
+  }
+}
+
+/* Font loading for Arabic */
+@font-face {
+  font-family: 'Cairo';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&display=swap');
+}
+
+/* RTL-specific utilities */
+.rtl\:text-right {
+  text-align: right !important;
+}
+
+.rtl\:text-left {
+  text-align: left !important;
+}
+
+.rtl\:space-x-reverse > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 1 !important;
+}
+
+.rtl\:flex-row-reverse {
+  flex-direction: row-reverse !important;
+}
+
+.rtl\:mr-auto {
+  margin-right: auto !important;
+}
+
+.rtl\:ml-auto {
+  margin-left: auto !important;
+}
+
+/* Google Ads RTL Support */
+[dir="rtl"] .google-ad {
+  direction: rtl !important;
+}
